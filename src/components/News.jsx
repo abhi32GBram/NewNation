@@ -1,0 +1,317 @@
+import React, { Component } from "react";
+import NewsItems from "./NewsItems";
+
+export class News extends Component {
+  articles = [
+    {
+      source: { id: null, name: "BBC News" },
+      author: "https://www.facebook.com/bbcnews",
+      title: "Bao Fan: Billionaire tech banker in China reported missing - BBC",
+      description:
+        "Bao Fan's company China Renaissance says it has not been able to reach him in recent days.",
+      url: "https://www.bbc.com/news/world-asia-64672095",
+      urlToImage:
+        "https://ichef.bbci.co.uk/news/1024/branded_news/5BB3/production/_128657432_gettyimages-1095740998.jpg",
+      publishedAt: "2023-02-17T07:53:08Z",
+      content:
+        "One of China's most high-profile billionaire bankers has gone missing, his company has reported.\r\nBao Fan, the chief executive of China Renaissance Holdings, had not been able to be reached in recent… [+2988 chars]",
+    },
+    {
+      source: { id: "associated-press", name: "Associated Press" },
+      author: "Josh Boak",
+      title:
+        "Doctor says Biden's 'vigorous' as he readies for 2024 run - The Associated Press - en Español",
+      description:
+        "WASHINGTON (AP) — Despite testing positive twice last year for the coronavirus, President Joe Biden  has no long-term symptoms and has been declared “healthy, vigorous” and “fit” to handle his White House responsibilities, according to a routine medical check…",
+      url: "https://apnews.com/article/biden-politics-united-states-government-health-bdce6c15df6186e06710f2d903a3513e",
+      urlToImage:
+        "https://storage.googleapis.com/afs-prod/media/340bf16703a541849e2ec49cb0591960/3000.webp",
+      publishedAt: "2023-02-17T07:05:33Z",
+      content:
+        "WASHINGTON (AP) Despite testing positive twice last year for the coronavirus, President Joe Biden has no long-term symptoms and has been declared healthy, vigorous and fit to handle his White House r… [+2525 chars]",
+    },
+    {
+      source: { id: null, name: "The Guardian" },
+      author: "Michael Sainato",
+      title:
+        "Tesla fires more than 30 workers after union drive announcement - The Guardian",
+      description:
+        "Workers at the Gigafactory 2 in Buffalo, New York, allege employees were fired in response to a union organizing drive",
+      url: "https://www.theguardian.com/technology/2023/feb/17/tesla-fires-workers-union-buffalo",
+      urlToImage:
+        "https://i.guim.co.uk/img/media/2af01706aff2085be77c17ac89bbbf18a898c791/0_233_3500_2101/master/3500.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=b840d75703d0af4d9af5c7c7b9107fd6",
+      publishedAt: "2023-02-17T07:02:00Z",
+      content:
+        "Tesla workers at the Gigafactory 2 in Buffalo, New York, allege over 30 workers were fired on 14 February in response to the announcement of a union organizing drive at the 1,000-worker facility.\r\nTh… [+2309 chars]",
+    },
+    {
+      source: { id: null, name: "Fox Business" },
+      author: "Ken Martin",
+      title:
+        "Electrical outage at JFK Airport leaves passengers stranded - Fox Business",
+      description:
+        "An electrical problem caused by a fire at JFK Airport has shut Terminal 1 which affects incoming and outgoing international flights.",
+      url: "https://www.foxbusiness.com/lifestyle/electrical-outage-jfk-airport-leaves-passengers-stranded",
+      urlToImage:
+        "https://a57.foxnews.com/static.foxbusiness.com/foxbusiness.com/content/uploads/2023/02/0/0/5c1958ca-JFK-exterior-A.png?ve=1&tl=1",
+      publishedAt: "2023-02-17T06:56:43Z",
+      content:
+        "A power outage at New York's Kennedy Airport has caused chaos for travelers counting on international flights.\r\nTravel disruptions are expected to continue on Friday as Terminal 1 will remain closed,… [+1471 chars]",
+    },
+    {
+      source: { id: "the-washington-post", name: "The Washington Post" },
+      author: "Barry Svrluga",
+      title:
+        "Maryland's win over Purdue was how College Park mayhem should feel - The Washington Post",
+      description:
+        "It felt great to be in College Park on Thursday night, which is just what Maryland basketball fans have been waiting for.",
+      url: "https://www.washingtonpost.com/sports/2023/02/16/maryland-basketball-court-storm-purdue/",
+      urlToImage:
+        "https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/K3CP54B7CNH6VN2ARWICLCPNYQ.jpg&w=1440",
+      publishedAt: "2023-02-17T06:17:00Z",
+      content:
+        "Comment on this story\r\nPick a moment, and hold on to it. Julian Reeses conversion underneath off a pretty little bounce pass from Don Carey, forcing a Purdue timeout. Patrick Emiliens dunk in transit… [+5868 chars]",
+    },
+    {
+      source: { id: null, name: "CNBC" },
+      author: "Yeo Boon Ping",
+      title:
+        "CNBC Daily Open: Markets fall on hot economy — and chance of 0.5% interest rate hikes - CNBC",
+      description:
+        "Economic data in January showed an unexpectedly strong U.S. economy. Markets fell, fearing a more hawkish Fed determined to strangle inflation.",
+      url: "https://www.cnbc.com/2023/02/17/stock-markets-drop-on-chance-of-0point5percent-interest-rate-hikes.html",
+      urlToImage:
+        "https://image.cnbcfm.com/api/v1/image/107196221-1676613653518-gettyimages-1175991982-UK_POLICY.jpeg?v=1676614310&w=1920&h=1080",
+      publishedAt: "2023-02-17T06:11:50Z",
+      content:
+        "This report is from today's CNBC Daily Open, our new, international markets newsletter. CNBC Daily Open brings investors up to speed on everything they need to know, no matter where they are. Like wh… [+1980 chars]",
+    },
+    {
+      source: { id: "associated-press", name: "Associated Press" },
+      author: "Kate Brumback",
+      title:
+        "Trump election probe grand jury believes some witnesses lied - The Associated Press - en Español",
+      description:
+        'ATLANTA (AP) — A special grand jury investigating efforts by then-President Donald Trump  and his allies to overturn his 2020 election loss in Georgia says it believes "one or more witnesses" committed perjury and urged local prosecutors to bring charges .',
+      url: "https://apnews.com/article/trump-georgia-election-investigation-grand-jury-documents-40535dd2b4401e804af515229c6c2d68",
+      urlToImage:
+        "https://storage.googleapis.com/afs-prod/media/329635677a204eac97c888e8dde327fb/3000.webp",
+      publishedAt: "2023-02-17T05:39:40Z",
+      content:
+        "ATLANTA (AP) A special grand jury investigating efforts by then-President Donald Trump and his allies to overturn his 2020 election loss in Georgia says it believes one or more witnesses committed pe… [+5306 chars]",
+    },
+    {
+      source: { id: null, name: "DW (English)" },
+      author: "Deutsche Welle",
+      title:
+        "Actor Bruce Willis suffers from dementia, family says - DW (English)",
+      description:
+        "Hollywood star Bruce Willis is afflicted with frontoemporal dementia (known as FTD) and faces communication challenges, his family announced. He retired from acting last year.",
+      url: "https://www.dw.com/en/actor-bruce-willis-suffers-from-dementia-family-says/a-64734629",
+      urlToImage: "https://static.dw.com/image/61310312_6.jpg",
+      publishedAt: "2023-02-17T04:07:45Z",
+      content:
+        "Actor Bruce Willis, 67, has been diagnosed with dementia, his family revealed on Thursday in a statement. \r\nWillis retired from acting last year after he was first diagnosed with aphasia. \r\nWhat do w… [+1375 chars]",
+    },
+    {
+      source: { id: "the-washington-post", name: "The Washington Post" },
+      author: "Gerrit De Vynck, Rachel Lerman, Nitasha Tiku",
+      title:
+        "Microsoft's new Bing A.I. chatbot, 'Sydney', is acting unhinged - The Washington Post",
+      description:
+        "Microsoft’s new AI chatbot is calling itself « Sydney » and acting unhinged. It learned from us.",
+      url: "https://www.washingtonpost.com/technology/2023/02/16/microsoft-bing-ai-chatbot-sydney/",
+      urlToImage:
+        "https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/X6VOIEJ6RJFGLNM4234OFDGD4Q.jpg&w=1440",
+      publishedAt: "2023-02-17T03:58:18Z",
+      content:
+        "Comment on this story\r\nWhen Marvin von Hagen, a 23-year-old studying technology in Germany, asked Microsofts new AI-powered search chatbot if it knew anything about him, the answer was a lot more sur… [+8251 chars]",
+    },
+    {
+      source: { id: null, name: "The Philadelphia Inquirer" },
+      author: "EJ Smith",
+      title:
+        "Howie Roseman: Jalen Hurts’ extension is a priority, and the Eagles GM isn’t influenced by Carson Wentz’s contract - The Philadelphia Inquirer",
+      description:
+        "The Eagles are looking to secure Hurts' long-term future with the franchise after the quarterback turned himself into an MVP candidate this season.",
+      url: "https://www.inquirer.com/eagles/jalen-hurts-contract-extension-eagles-howie-roseman-20230216.html",
+      urlToImage:
+        "https://www.inquirer.com/resizer/fmQ8CElLU40c8q_htpnXhZ0aBM8=/760x507/smart/filters:format(webp)/cloudfront-us-east-1.images.arcpublishing.com/pmn/TPVMJLMKABG6XFIWODOK7JTTLQ.jpg",
+      publishedAt: "2023-02-17T03:23:46Z",
+      content:
+        "Throughout the last few days, Howie Roseman has heard a phrase repeated by Eagles players and coaches that has stuck in the back of his mind.\r\nWell be back.\r\nThe notion of winning the championship ne… [+4453 chars]",
+    },
+    {
+      source: { id: null, name: "The Guardian" },
+      author: "Guardian staff reporter",
+      title:
+        "Tiger Woods finishes first round back with three birdies at Genesis Invitational - The Guardian",
+      description:
+        "Tiger Woods marked his return to competitive action with a closing trio of birdies as he carded 69 during the first round of the Genesis Invitational.",
+      url: "https://www.theguardian.com/sport/2023/feb/17/tiger-woods-finishes-first-round-back-with-three-birdies-at-genesis-invitational",
+      urlToImage:
+        "https://i.guim.co.uk/img/media/bce9b70f016488556991dfb585f2ae96826dba3e/0_358_5370_3222/master/5370.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=c0508abfd10570959668853c5022b7f9",
+      publishedAt: "2023-02-17T03:12:00Z",
+      content:
+        "Tiger Woods marked his return to competitive action with a closing trio of birdies as he carded 69 during the first round of the Genesis Invitational.\r\nThe tournament host was five strokes back from … [+1969 chars]",
+    },
+    {
+      source: { id: "cnn", name: "CNN" },
+      author:
+        'By <a href="/profiles/kathleen-magramo">Kathleen Magramo</a>, Jack Guy, <a href="/profiles/aditi-sandal">Aditi Sangal</a>, <a href="/profiles/leinz-vales">Leinz Vales</a>, <a href="/profiles/adrienne-vogt">Adrienne Vogt</a>, <a href="/profiles/matt-meyer">Matt Meyer</a> and <a href="/profiles/maureen-chowdhury">Maureen Chowdhury</a>, CNN',
+      title: "February 16, 2023 - Russia-Ukraine news - CNN",
+      description:
+        'Belarusian President Alexander Lukashenko said there is "no way" Belarus will send troops to Ukraine unless the country is attacked. Lukashenko is set to meet Russian President Vladimir Putin on Friday.',
+      url: "https://www.cnn.com/europe/live-news/russia-ukraine-war-news-2-16-23/index.html",
+      urlToImage:
+        "https://cdn.cnn.com/cnnnext/dam/assets/230215134431-02-ukraine-war-0214-bakhmut-super-tease.jpg",
+      publishedAt: "2023-02-17T02:59:00Z",
+      content:
+        "While Russian forces appear to be preparing a new offensive in Ukraine, Western officials are skeptical that Moscow has amassed the manpower and resources to make significant gains. \r\nOn Thursday, US… [+2188 chars]",
+    },
+    {
+      source: { id: null, name: "BBC News" },
+      author: "https://www.facebook.com/bbcnews",
+      title:
+        "Ohio town rues chemical train derailment as 'our Chernobyl' - BBC",
+      description:
+        "Residents of this close-knit community fear the railroad disaster has changed their lives forever.",
+      url: "https://www.bbc.com/news/world-us-canada-64671893",
+      urlToImage:
+        "https://ichef.bbci.co.uk/news/1024/branded_news/14CB7/production/_128657158_c2ccc9017895c0b51d0e1c6b630f2d6618c288b40_0_5100_28701000x563.jpg",
+      publishedAt: "2023-02-17T01:54:21Z",
+      content:
+        "Media caption, Watch: Ohio man walks through new life after train derailment\r\nFor East Palestine residents John and Lisa Hamner, life as they knew it came to a screeching, flaming halt at 20:55 on 3 … [+4678 chars]",
+    },
+    {
+      source: { id: "cnn", name: "CNN" },
+      author: "Maegan Vazquez, Sam Fossum",
+      title:
+        "Biden says objects shot down over North America last week appear to not be part of China's spy balloon operation - CNN",
+      description:
+        "President Joe Biden on Thursday said that the United States has no indication that the three objects shot down in North American air space are tied to China's spy balloon program and are likely from private entities.",
+      url: "https://www.cnn.com/2023/02/16/politics/president-biden-downed-objects/index.html",
+      urlToImage:
+        "https://media.cnn.com/api/v1/images/stellar/prod/230216142131-04-biden-0216.jpg?c=16x9&q=w_800,c_fill",
+      publishedAt: "2023-02-17T01:14:00Z",
+      content:
+        "President Joe Biden on Thursday said that the United States has no indication that the three objects shot down in North American air space are tied to Chinas spy balloon program and are likely from p… [+5269 chars]",
+    },
+    {
+      source: { id: null, name: "DW (English)" },
+      author: "Deutsche Welle",
+      title:
+        "Spain passes laws on trans rights, abortion, menstrual leave - DW (English)",
+      description:
+        "The new laws expand transgender rights and abortion access, as well as give workers paid menstrual leave. The approval comes ahead of scheduled elections later this year.",
+      url: "https://www.dw.com/en/spain-passes-laws-on-trans-rights-abortion-menstrual-leave/a-64731685",
+      urlToImage: "https://static.dw.com/image/64732065_6.jpg",
+      publishedAt: "2023-02-17T01:12:12Z",
+      content:
+        "Spain's parliament on Thursday passed legislation which makes it easier for trans people to change their gender, expands access to abortion procedures and grants menstrual leave to women suffering fr… [+3903 chars]",
+    },
+    {
+      source: { id: null, name: "MacRumors" },
+      author: "Juli Clover",
+      title:
+        "Tile Adds Undetectable Anti-Theft Mode to Tracking Devices, With $1 Million Fine If Used for Stalking - MacRumors",
+      description:
+        "AirTag competitor Tile today announced a new Anti-Theft Mode for Tile tracking devices, which is designed to make Tile accessories undetectable by...",
+      url: "https://www.macrumors.com/2023/02/16/tile-anti-theft-mode/",
+      urlToImage:
+        "https://images.macrumors.com/t/e_JuJFc6RnBsfoLRK6eNzuJsFBY=/1600x/article-new/2021/05/tile-sticker-feature.jpg",
+      publishedAt: "2023-02-17T00:52:17Z",
+      content:
+        "AirTag competitor Tile today announced a new Anti-Theft Mode for Tile tracking devices, which is designed to make Tile accessories undetectable by the anti-stalking Scan and Secure feature.\r\nScan and… [+3134 chars]",
+    },
+    {
+      source: { id: "associated-press", name: "Associated Press" },
+      author: "Jacques Billeaud",
+      title:
+        "Kari Lake loses appeal in Arizona governor race challenge - The Associated Press - en Español",
+      description:
+        "PHOENIX (AP) — An Arizona appeals court has rejected Republican Kari Lake’s challenge of her defeat in the Arizona governor’s race to Democrat Katie Hobbs, denying her request to throw out election results in the state’s most populous county and hold the elec…",
+      url: "https://apnews.com/article/politics-kari-lake-katie-hobbs-arizona-862fcc3bea34bd46b697f5ba0ea41bce",
+      urlToImage:
+        "https://storage.googleapis.com/afs-prod/media/d370280fc3da4c7cbf3da56716f0dd4d/3000.webp",
+      publishedAt: "2023-02-17T00:46:58Z",
+      content:
+        "PHOENIX (AP) An Arizona appeals court has rejected Republican Kari Lakes challenge of her defeat in the Arizona governors race to Democrat Katie Hobbs, denying her request to throw out election resul… [+2957 chars]",
+    },
+    {
+      source: { id: null, name: "CNET" },
+      author: "Amanda Kooser",
+      title:
+        "NASA's Webb Space Telescope Reveals Brand New Details of Pandora's Cluster - CNET",
+      description:
+        '"We had to remind ourselves that this was real data, and we are working in a new era of astronomy now."',
+      url: "https://www.cnet.com/science/space/nasas-webb-space-telescope-reveals-brand-new-details-of-pandoras-cluster/",
+      urlToImage:
+        "https://www.cnet.com/a/img/resize/cf944ab0039d44ad1968e0a810c3cd8feed1a919/hub/2023/02/15/08e0f0e0-fc0a-4150-be40-f47a94a3d249/pandorasclusterweic2305a.jpg?auto=webp&fit=crop&height=630&width=1200",
+      publishedAt: "2023-02-17T00:35:00Z",
+      content:
+        "There are galaxies. Then there are galaxy clusters, which are made up of hundreds to thousands of galaxies held together by gravity. Then there are galaxy megaclusters -- a cluster of clusters, if yo… [+2566 chars]",
+    },
+    {
+      source: { id: "abc-news", name: "ABC News" },
+      author: "Stephanie Ebbs, Ivan Pereira",
+      title:
+        "First ever images of Antarctica's 'Doomsday glacier' show melting from below - ABC News",
+      description:
+        "Researchers were able to deploy cameras and sensors underneath the glacier.",
+      url: "https://abcnews.go.com/International/images-antarcticas-doomsday-glacier-show-melting-below/story?id=97269226",
+      urlToImage:
+        "https://s.abcnews.com/images/International/thwaites-glacier-ht-jef-230216_1676587632191_hpMain_16x9_992.jpg",
+      publishedAt: "2023-02-17T00:15:02Z",
+      content:
+        "Scientists studying one of the most crucial glaciers that's been deteriorating by climate change got a new look at what's going on underneath the surface.\r\nIn two studies published in the science jou… [+3151 chars]",
+    },
+    {
+      source: { id: null, name: "PBS" },
+      author: null,
+      title:
+        "People with long COVID explain how it changed their lives - PBS NewsHour",
+      description:
+        "The specter of long COVID, with its mysterious cause, no obvious cure and an unknown duration, haunts millions and millions of people. In this report, we hear from some of those who are suffering with it and William Brangham speaks with Dr. David Putrino of M…",
+      url: "https://www.pbs.org/newshour/show/people-living-with-long-covid-explain-how-the-disease-changed-their-lives",
+      urlToImage:
+        "https://d3i6fh83elv35t.cloudfront.net/static/2023/02/LongCovid-1024x683.jpg",
+      publishedAt: "2023-02-16T23:35:22Z",
+      content:
+        "David Putrino:\r\nRight now, there's a lot of uncertainty about the underlying causes of long COVID.\r\nBut what we know for sure is that long COVID is an organic disease. So, we understand that the viru… [+1082 chars]",
+    },
+  ];
+  constructor() {
+    super();
+    console.log("bruh lmao construct or something idk ");
+    this.state = {
+      articles: this.articles,
+      loading: false,
+    };
+  }
+  render() {
+    return (
+      <div className="container my-3">
+        <h2>Todays Top Headline - On NewsNation</h2>
+        <div className="row">
+          <div className="col-md-4">
+            <NewsItems
+              title="theTitle"
+              description="theDesc"
+              imgUrl="https://static.dw.com/image/61310312_6.jpg"
+              newsUrl="TOO DOO "
+            />
+          </div>
+          <div className="col-md-4">
+            <NewsItems title="theTitle" description="theDesc" />
+          </div>
+          <div className="col-md-4">
+            <NewsItems title="theTitle" description="theDesc" />
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+
+export default News;
