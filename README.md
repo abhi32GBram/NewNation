@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# WELCOME TO MY SIMPLE NEWS APPLICATION BUILT USING REACT AND THE NEWS API 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
