@@ -155,131 +155,6 @@ export class News extends Component {
       content:
         "Tiger Woods marked his return to competitive action with a closing trio of birdies as he carded 69 during the first round of the Genesis Invitational.\r\nThe tournament host was five strokes back from … [+1969 chars]",
     },
-    {
-      source: { id: "cnn", name: "CNN" },
-      author:
-        'By <a href="/profiles/kathleen-magramo">Kathleen Magramo</a>, Jack Guy, <a href="/profiles/aditi-sandal">Aditi Sangal</a>, <a href="/profiles/leinz-vales">Leinz Vales</a>, <a href="/profiles/adrienne-vogt">Adrienne Vogt</a>, <a href="/profiles/matt-meyer">Matt Meyer</a> and <a href="/profiles/maureen-chowdhury">Maureen Chowdhury</a>, CNN',
-      title: "February 16, 2023 - Russia-Ukraine news - CNN",
-      description:
-        'Belarusian President Alexander Lukashenko said there is "no way" Belarus will send troops to Ukraine unless the country is attacked. Lukashenko is set to meet Russian President Vladimir Putin on Friday.',
-      url: "https://www.cnn.com/europe/live-news/russia-ukraine-war-news-2-16-23/index.html",
-      urlToImage:
-        "https://cdn.cnn.com/cnnnext/dam/assets/230215134431-02-ukraine-war-0214-bakhmut-super-tease.jpg",
-      publishedAt: "2023-02-17T02:59:00Z",
-      content:
-        "While Russian forces appear to be preparing a new offensive in Ukraine, Western officials are skeptical that Moscow has amassed the manpower and resources to make significant gains. \r\nOn Thursday, US… [+2188 chars]",
-    },
-    {
-      source: { id: null, name: "BBC News" },
-      author: "https://www.facebook.com/bbcnews",
-      title:
-        "Ohio town rues chemical train derailment as 'our Chernobyl' - BBC",
-      description:
-        "Residents of this close-knit community fear the railroad disaster has changed their lives forever.",
-      url: "https://www.bbc.com/news/world-us-canada-64671893",
-      urlToImage:
-        "https://ichef.bbci.co.uk/news/1024/branded_news/14CB7/production/_128657158_c2ccc9017895c0b51d0e1c6b630f2d6618c288b40_0_5100_28701000x563.jpg",
-      publishedAt: "2023-02-17T01:54:21Z",
-      content:
-        "Media caption, Watch: Ohio man walks through new life after train derailment\r\nFor East Palestine residents John and Lisa Hamner, life as they knew it came to a screeching, flaming halt at 20:55 on 3 … [+4678 chars]",
-    },
-    {
-      source: { id: "cnn", name: "CNN" },
-      author: "Maegan Vazquez, Sam Fossum",
-      title:
-        "Biden says objects shot down over North America last week appear to not be part of China's spy balloon operation - CNN",
-      description:
-        "President Joe Biden on Thursday said that the United States has no indication that the three objects shot down in North American air space are tied to China's spy balloon program and are likely from private entities.",
-      url: "https://www.cnn.com/2023/02/16/politics/president-biden-downed-objects/index.html",
-      urlToImage:
-        "https://media.cnn.com/api/v1/images/stellar/prod/230216142131-04-biden-0216.jpg?c=16x9&q=w_800,c_fill",
-      publishedAt: "2023-02-17T01:14:00Z",
-      content:
-        "President Joe Biden on Thursday said that the United States has no indication that the three objects shot down in North American air space are tied to Chinas spy balloon program and are likely from p… [+5269 chars]",
-    },
-    {
-      source: { id: null, name: "DW (English)" },
-      author: "Deutsche Welle",
-      title:
-        "Spain passes laws on trans rights, abortion, menstrual leave - DW (English)",
-      description:
-        "The new laws expand transgender rights and abortion access, as well as give workers paid menstrual leave. The approval comes ahead of scheduled elections later this year.",
-      url: "https://www.dw.com/en/spain-passes-laws-on-trans-rights-abortion-menstrual-leave/a-64731685",
-      urlToImage: "https://static.dw.com/image/64732065_6.jpg",
-      publishedAt: "2023-02-17T01:12:12Z",
-      content:
-        "Spain's parliament on Thursday passed legislation which makes it easier for trans people to change their gender, expands access to abortion procedures and grants menstrual leave to women suffering fr… [+3903 chars]",
-    },
-    {
-      source: { id: null, name: "MacRumors" },
-      author: "Juli Clover",
-      title:
-        "Tile Adds Undetectable Anti-Theft Mode to Tracking Devices, With $1 Million Fine If Used for Stalking - MacRumors",
-      description:
-        "AirTag competitor Tile today announced a new Anti-Theft Mode for Tile tracking devices, which is designed to make Tile accessories undetectable by...",
-      url: "https://www.macrumors.com/2023/02/16/tile-anti-theft-mode/",
-      urlToImage:
-        "https://images.macrumors.com/t/e_JuJFc6RnBsfoLRK6eNzuJsFBY=/1600x/article-new/2021/05/tile-sticker-feature.jpg",
-      publishedAt: "2023-02-17T00:52:17Z",
-      content:
-        "AirTag competitor Tile today announced a new Anti-Theft Mode for Tile tracking devices, which is designed to make Tile accessories undetectable by the anti-stalking Scan and Secure feature.\r\nScan and… [+3134 chars]",
-    },
-    {
-      source: { id: "associated-press", name: "Associated Press" },
-      author: "Jacques Billeaud",
-      title:
-        "Kari Lake loses appeal in Arizona governor race challenge - The Associated Press - en Español",
-      description:
-        "PHOENIX (AP) — An Arizona appeals court has rejected Republican Kari Lake’s challenge of her defeat in the Arizona governor’s race to Democrat Katie Hobbs, denying her request to throw out election results in the state’s most populous county and hold the elec…",
-      url: "https://apnews.com/article/politics-kari-lake-katie-hobbs-arizona-862fcc3bea34bd46b697f5ba0ea41bce",
-      urlToImage:
-        "https://storage.googleapis.com/afs-prod/media/d370280fc3da4c7cbf3da56716f0dd4d/3000.webp",
-      publishedAt: "2023-02-17T00:46:58Z",
-      content:
-        "PHOENIX (AP) An Arizona appeals court has rejected Republican Kari Lakes challenge of her defeat in the Arizona governors race to Democrat Katie Hobbs, denying her request to throw out election resul… [+2957 chars]",
-    },
-    {
-      source: { id: null, name: "CNET" },
-      author: "Amanda Kooser",
-      title:
-        "NASA's Webb Space Telescope Reveals Brand New Details of Pandora's Cluster - CNET",
-      description:
-        '"We had to remind ourselves that this was real data, and we are working in a new era of astronomy now."',
-      url: "https://www.cnet.com/science/space/nasas-webb-space-telescope-reveals-brand-new-details-of-pandoras-cluster/",
-      urlToImage:
-        "https://www.cnet.com/a/img/resize/cf944ab0039d44ad1968e0a810c3cd8feed1a919/hub/2023/02/15/08e0f0e0-fc0a-4150-be40-f47a94a3d249/pandorasclusterweic2305a.jpg?auto=webp&fit=crop&height=630&width=1200",
-      publishedAt: "2023-02-17T00:35:00Z",
-      content:
-        "There are galaxies. Then there are galaxy clusters, which are made up of hundreds to thousands of galaxies held together by gravity. Then there are galaxy megaclusters -- a cluster of clusters, if yo… [+2566 chars]",
-    },
-    {
-      source: { id: "abc-news", name: "ABC News" },
-      author: "Stephanie Ebbs, Ivan Pereira",
-      title:
-        "First ever images of Antarctica's 'Doomsday glacier' show melting from below - ABC News",
-      description:
-        "Researchers were able to deploy cameras and sensors underneath the glacier.",
-      url: "https://abcnews.go.com/International/images-antarcticas-doomsday-glacier-show-melting-below/story?id=97269226",
-      urlToImage:
-        "https://s.abcnews.com/images/International/thwaites-glacier-ht-jef-230216_1676587632191_hpMain_16x9_992.jpg",
-      publishedAt: "2023-02-17T00:15:02Z",
-      content:
-        "Scientists studying one of the most crucial glaciers that's been deteriorating by climate change got a new look at what's going on underneath the surface.\r\nIn two studies published in the science jou… [+3151 chars]",
-    },
-    {
-      source: { id: null, name: "PBS" },
-      author: null,
-      title:
-        "People with long COVID explain how it changed their lives - PBS NewsHour",
-      description:
-        "The specter of long COVID, with its mysterious cause, no obvious cure and an unknown duration, haunts millions and millions of people. In this report, we hear from some of those who are suffering with it and William Brangham speaks with Dr. David Putrino of M…",
-      url: "https://www.pbs.org/newshour/show/people-living-with-long-covid-explain-how-the-disease-changed-their-lives",
-      urlToImage:
-        "https://d3i6fh83elv35t.cloudfront.net/static/2023/02/LongCovid-1024x683.jpg",
-      publishedAt: "2023-02-16T23:35:22Z",
-      content:
-        "David Putrino:\r\nRight now, there's a lot of uncertainty about the underlying causes of long COVID.\r\nBut what we know for sure is that long COVID is an organic disease. So, we understand that the viru… [+1082 chars]",
-    },
   ];
   constructor() {
     super();
@@ -292,22 +167,21 @@ export class News extends Component {
   render() {
     return (
       <div className="container my-3">
-        <h2>Todays Top Headline - On NewsNation</h2>
+        <h2>Today's Top Headline - On NewsNation</h2>
+
         <div className="row">
-          <div className="col-md-4">
-            <NewsItems
-              title="theTitle"
-              description="theDesc"
-              imgUrl="https://static.dw.com/image/61310312_6.jpg"
-              newsUrl="TOO DOO "
-            />
-          </div>
-          <div className="col-md-4">
-            <NewsItems title="theTitle" description="theDesc" />
-          </div>
-          <div className="col-md-4">
-            <NewsItems title="theTitle" description="theDesc" />
-          </div>
+          {this.state.articles.map((element) => {
+            return (
+              <div className="col-md-4" key={element.url}>
+                <NewsItems
+                  title={element.title.slice(0, 35)}
+                  description={element.description.slice(0, 75)}
+                  imgUrl={element.urlToImage}
+                  newsUrl={element.url}
+                />
+              </div>
+            );
+          })}
         </div>
       </div>
     );
