@@ -1,12 +1,11 @@
 import React, { Component } from "react";
-
 export class NavBar extends Component {
   render() {
     return (
       <div>
-        <nav className="navbar navbar-expand-lg bg-body-tertiary">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
           <div className="container-fluid">
-            <a className="navbar-brand" href="#">
+            <a className="navbar-brand" href="/">
               NewsNation
             </a>
             <button
@@ -31,8 +30,8 @@ export class NavBar extends Component {
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/aboutUs">
-                    About Us
+                  <a className="nav-link" href="/about">
+                    About
                   </a>
                 </li>
               </ul>
