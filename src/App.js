@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+//import logo from "./logo.svg";
 import "./App.css";
 
 import React, { Component } from "react";
@@ -10,7 +10,7 @@ export default class App extends Component {
     return (
       <div>
         <NavBar />
-        <News />
+        <News PageSize={6} country="in" category="sports" />
       </div>
     );
   }
