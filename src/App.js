@@ -17,7 +17,7 @@ export default function App() {
               <News
                 key="science"
                 PageSize={6}
-                country="in"
+                country="us"
                 category="science"
               />
             }
@@ -29,7 +29,7 @@ export default function App() {
               <News
                 key="business"
                 PageSize={6}
-                country="in"
+                country="us"
                 category="business"
               />
             }
@@ -41,7 +41,7 @@ export default function App() {
               <News
                 key="entertainment"
                 PageSize={6}
-                country="in"
+                country="us"
                 category="entertainment"
               />
             }
@@ -53,7 +53,7 @@ export default function App() {
               <News
                 key="science"
                 PageSize={6}
-                country="in"
+                country="us"
                 category="science"
               />
             }
@@ -65,7 +65,7 @@ export default function App() {
               <News
                 key="technology"
                 PageSize={6}
-                country="in"
+                country="us"
                 category="technology"
               />
             }
@@ -77,7 +77,7 @@ export default function App() {
               <News
                 key="general"
                 PageSize={6}
-                country="in"
+                country="us"
                 category="general"
               />
             }
@@ -86,14 +86,14 @@ export default function App() {
             exact
             path="/Health"
             element={
-              <News key="health" PageSize={6} country="in" category="health" />
+              <News key="health" PageSize={6} country="us" category="health" />
             }
           />
           <Route
             exact
             path="/Sports"
             element={
-              <News key="sports" PageSize={6} country="in" category="sports" />
+              <News key="sports" PageSize={6} country="us" category="sports" />
             }
           />
         </Routes>
