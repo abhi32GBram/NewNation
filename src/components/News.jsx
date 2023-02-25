@@ -24,6 +24,19 @@ export class News extends Component {
     };
   }
 
+  async newsUpdater() {
+    this.setState({ loading: true });
+    const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=bd6bd730d02c4144b799b50b3dcc763a&page=${this.state.peage}&pageSize=${this.props.PageSize}`;
+
+    let fetchData = await fetch(url);
+    let parsedData = await fetchData.json();
+    console.log(parsedData);
+    this.setState({
+      articles: parsedData.articles,
+      totalResults: parsedData.totalResults,
+      loading: false,
+    });
+  }
   async componentDidMount() {
     this.setState({ loading: true });
     let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=bd6bd730d02c4144b799b50b3dcc763a&page=1&pageSize=${this.props.PageSize}`;
@@ -40,47 +53,12 @@ export class News extends Component {
 
   handlePrevClick = async () => {
     this.setState({ page: this.state.page - 1 });
-    let url = `https://newsapi.org/v2/top-headlines?country=${
-      this.props.country
-    }&category=${
-      this.props.category
-    }&apiKey=bd6bd730d02c4144b799b50b3dcc763a&page=${
-      this.state.page - 1
-    }&pageSize=${this.props.PageSize}`;
-    this.setState({ loading: true });
-    let fetchData = await fetch(url);
-    let parsedData = await fetchData.json();
-
-    this.setState({
-      articles: parsedData.articles,
-      loading: false,
-    });
+    this.newsUpdater();
   };
 
   handleNextClick = async () => {
-    if (
-      this.state.page + 1 >
-      Math.ceil(this.state.totalResults / this.props.PageSize)
-    ) {
-    } else {
-      this.setState({ page: this.state.page + 1 });
-      let url = `https://newsapi.org/v2/top-headlines?country=${
-        this.props.country
-      }&category=${
-        this.props.category
-      }&apiKey=bd6bd730d02c4144b799b50b3dcc763a&page=${
-        this.state.page + 1
-      }&pageSize=${this.props.PageSize}`;
-      this.setState({ loading: true });
-      let fetchData = await fetch(url);
-      let parsedData = await fetchData.json();
-
-      console.log(parsedData);
-      this.setState({
-        articles: parsedData.articles,
-        loading: false,
-      });
-    }
+    this.setState({ page: this.state.page + 1 });
+    this.newsUpdater();
   };
 
   render() {

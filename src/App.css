@@ -1,38 +1,97 @@
-.App {
+.navbar-brand {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  color: darkslateblue;
+
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 5s ease infinite;
+  border-radius: 5px;
+}
+
+.container-fluid {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  background: linear-gradient(-45deg, #d9d3d2, #8c8988, #545252, #30302f);
+  background-size: 400% 400%;
+  animation: gradient 5s ease infinite;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.card-body {
+  color: #e8e7e6;
+}
+
+.card-title {
+  color: black;
+}
+
+.card-text {
+  color: darkgray;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background: #333;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  min-height: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+html {
+  height: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.text-center {
+  background: linear-gradient(
+    -45deg,
+    #2e1bfa,
+    #6355a4,
+    #6355a4,
+    #cecce3,
+    #c2493e,
+    #8a1e15,
+    #dbd51a,
+    #e89a3e,
+    #e89a3e,
+    #ed8447
+  );
+  background-size: 300%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+
+  letter-spacing: -5px;
+  text-transform: uppercase;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animated_text 4s ease-in-out infinite;
+  -moz-animation: animated_text 4s ease-in-out infinite;
+  -webkit-animation: animated_text 4s ease-in-out infinite;
+}
+
+@keyframes animated_text {
+  0% {
+    background-position: 0px 50%;
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0px 50%;
   }
 }
