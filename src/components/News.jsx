@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import NewsItem from "./NewsItems";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Spinner from "./Spinner";
+import LoadingBar from "react-top-loading-bar";
 
 export class News extends Component {
   static defaultProps = {
@@ -31,18 +32,22 @@ export class News extends Component {
   capital_first_letter = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
   };
+
   async newsUpdater() {
+    this.props.setProgress(15);
     this.setState({ loading: true });
     const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=bd6bd730d02c4144b799b50b3dcc763a&page=${this.state.peage}&pageSize=${this.props.PageSize}`;
 
     let fetchData = await fetch(url);
     let parsedData = await fetchData.json();
     console.log(parsedData);
+    this.props.setProgress(15);
     this.setState({
       articles: parsedData.articles,
       totalResults: parsedData.totalResults,
       loading: false,
     });
+    this.props.setProgress(100);
   }
   async componentDidMount() {
     this.setState({ loading: true });
