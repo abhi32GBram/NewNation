@@ -76,7 +76,7 @@ export default function App() {
           />
           <Route
             exact
-            path="/General"
+            path="/Home"
             element={
               <News
                 setProgress={setProgress}

@@ -91,7 +91,10 @@ export class News extends Component {
   render() {
     return (
       <>
-        <h1 className="text-center" style={{ margin: "35px 0px" }}>
+        <h1
+          className="text-center"
+          style={{ margin: "35px 0px", marginTop: "90px" }}
+        >
           Today's Top Headline - On{" "}
           {this.capital_first_letter(this.props.category)}
         </h1>
@@ -124,33 +127,122 @@ export class News extends Component {
             </div>
           </div>
         </InfiniteScroll>
-
-        {/* THIS WONT BE NEED ANYMORE  */}
-        {/* <div className="container d-flex justify-content-between">
-          <button
-            disabled={this.state.page <= 1}
-            type="button"
-            className="btn btn-dark"
-            onClick={this.handlePrevClick}
-          >
-            {" "}
-            &larr; Previous
-          </button>
-          <button
-            disabled={
-              this.state.page + 1 >
-              Math.ceil(this.state.totalResults / this.props.PageSize)
-            }
-            type="button"
-            className="btn btn-dark"
-            onClick={this.handleNextClick}
-          >
-            Next &rarr;
-          </button>
-        </div> */}
       </>
     );
   }
 }
 
 export default News;
+
+// --------------------------------------
+// TRIED TO CONVERT THE CALSS BASED COMPONENT INTO FUNCTION COMPONENT
+
+// DOSENT UPDATE THE NEXT SECTION OF NEWS FOR SOME REASON
+
+// ERROR - Cannot read properties of undefined (reading 'name')
+
+// import React, { useEffect, useState } from "react";
+// import PropTypes from "prop-types";
+// import NewsItem from "./NewsItems";
+// import InfiniteScroll from "react-infinite-scroll-component";
+// import Spinner from "./Spinner";
+// import LoadingBar from "react-top-loading-bar";
+
+// const News = (props) => {
+//   const [articles, setArticles] = useState([]);
+//   const [loading, setLoading] = useState(true);
+//   const [page, setPage] = useState(1);
+//   const [totalResults, setTotalResults] = useState(0);
+
+//   const capital_first_letter = (string) => {
+//     return string.charAt(0).toUpperCase() + string.slice(1);
+//   };
+
+//   const newsUpdater = async () => {
+//     props.setProgress(15);
+//     setLoading(true);
+//     const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=bd6bd730d02c4144b799b50b3dcc763a&page=${page}&pageSize=${props.PageSize}`;
+
+//     let fetchData = await fetch(url);
+//     let parsedData = await fetchData.json();
+//     console.log(parsedData);
+//     props.setProgress(15);
+//     setArticles(parsedData.articles);
+//     setTotalResults(parsedData.totalResults);
+//     setLoading(false);
+//     props.setProgress(100);
+//   };
+
+//   useEffect(() => {
+//     document.title = `${capital_first_letter(props.category)} | NewsNation`;
+//     newsUpdater();
+//   }, []);
+
+//   const fetchMoreData = async () => {
+//     setLoading(true);
+//     const url = `https://newsapi.org/v2/top-headlines?country=${
+//       props.country
+//     }&category=${props.category}&apiKey=bd6bd730d02c4144b799b50b3dcc763a&page=${
+//       page + 1
+//     }&pageSize=${props.PageSize}`;
+//     setPage(page + 1);
+//     let fetchData = await fetch(url);
+//     let parsedData = await fetchData.json();
+//     console.log(parsedData);
+
+//     setArticles([articles, parsedData.articles]);
+//     setTotalResults(parsedData.totalResults);
+//     setLoading(false);
+//   };
+
+//   return (
+//     <>
+//       <h1
+//         className="text-center"
+//         style={{ margin: "35px 0px", marginTop: "90px" }}
+//       >
+//         Today's Top Headline - On {capital_first_letter(props.category)}
+//       </h1>
+//       <InfiniteScroll
+//         dataLength={articles.length}
+//         next={fetchMoreData}
+//         hasMore={articles.length !== totalResults}
+//         loader={<Spinner />}
+//       >
+//         <div className="container">
+//           <div className="row">
+//             {articles.map((element) => {
+//               return (
+//                 <div className="col-md-4" key={element.url}>
+//                   <NewsItem
+//                     title={element.title}
+//                     description={element.description}
+//                     imgUrl={element.urlToImage}
+//                     newsUrl={element.url}
+//                     author={element.author}
+//                     date={element.publishedAt}
+//                     newsSource={element.source.name}
+//                     key={element.url}
+//                   />
+//                 </div>
+//               );
+//             })}
+//           </div>
+//         </div>
+//       </InfiniteScroll>
+//     </>
+//   );
+// };
+
+// News.defaultProps = {
+//   country: "in",
+//   PageSize: 8,
+//   category: "general",
+// };
+// News.propTypes = {
+//   country: PropTypes.string,
+//   PageSize: PropTypes.number,
+//   category: PropTypes.string,
+// };
+
+// export default News;
